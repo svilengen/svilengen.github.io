@@ -19,6 +19,11 @@
 				background-color: black;
 				color: white;
 			}
+			
+			.imageClass {
+				max-width: 15%; 
+				height: auto; 
+			}
 						
 			
 		</style>
@@ -71,7 +76,7 @@
 				
 				if (index == 3) {
 					html += '<td class="w3-center">';				
-					html += '<img style="width:15%;height:15%;" src="' + colData + '"></img>';
+					html += '<img class="imageClass" src="' + colData + '"></img>';
 				} else {
 					html += '<td>';				
 					html += colData;
