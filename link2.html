@@ -19,7 +19,7 @@
 				background-color: black;
 				color: white;
 			}
-			
+						
 			
 		</style>
 	</head>
@@ -53,18 +53,29 @@
 			html += '<thead>';
 			html += '<tr>';
 			$.each(row, function( index, colData ) {
+			if (index == 3) {
+				html += '<th class="w3-center">';
+			} else {
 				html += '<th>';
-				html += colData;
-				html += '</th>';
+			}				
+			html += colData;
+			html += '</th>';
 			});
+			
 			html += '</tr>';
 			html += '</thead>';
 			html += '<tbody>';
 		  } else {
 			html += '<tr>';
 			$.each(row, function( index, colData ) {
-				html += '<td>';
-				html += colData;
+				
+				if (index == 3) {
+					html += '<td class="w3-center">';				
+					html += '<img style="width:15%;height:15%;" src="' + colData + '"></img>';
+				} else {
+					html += '<td>';				
+					html += colData;
+				}				
 				html += '</td>';
 			});
 			html += '</tr>';
