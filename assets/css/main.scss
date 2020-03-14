@@ -1,0 +1,90 @@
+---
+---
+
+// Your variable overrides
+$body-bg: #000;
+$body-color: white;
+
+/* Style and animated centered loader */
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #616161;
+    border-radius: 50%;
+    border-top: 16px solid black;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.card-shadow {
+    // h-offset v-offset blur spread color
+    box-shadow: 1px 0px 1px 1px rgba(255, 255, 255, 0.2), 
+    0px 1px 1px 1px rgba(255, 255, 255, 0.14), 
+    -1px 0px 1px 1px rgba(255, 255, 255, 0.12),
+    0px -1px 1px 1px rgba(255, 255, 255, 0.12);
+}
+
+/* Style and animate the active class */
+
+.activeCard {
+    animation-name: activeCard;
+    animation-duration: 0.5s;
+    box-shadow: 0px 0px 10px 8px rgba(255, 255, 255, 1) !important;    
+    transform: translateY(4px);
+}
+
+@keyframes activeCard {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(4px);
+    }
+}
+
+
+.imageModal {
+    padding: 0.1rem;
+    background-color:white;    
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px 1px black;    
+}
+
+.videoModal {
+    padding: 0.1rem;
+    background-color:white;    
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px 1px black;    
+}
+
+
+
+// Bootstrap and its default variables
+@import "bootstrap/bootstrap";
