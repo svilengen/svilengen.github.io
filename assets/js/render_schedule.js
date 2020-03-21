@@ -1,16 +1,4 @@
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<script>
-    $(document).ajaxStart(function() {
-        $("#loader").show();
-    });
-
-    $(document).ajaxStop(function() {
-        $("#loader").hide();
-    });
 
     // Read a page's GET URL variables and return them as an associative array.
     function getUrlVars()
@@ -33,7 +21,7 @@
       theUrl += '?location=' + locationParameter;
     }     
 
-    //var theUrl = "test/data.js";
+    // var theUrl = "test/data.js";
 
     $.ajax({
         type: "GET",
@@ -117,55 +105,22 @@
 
         }
     });
-</script>
 
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl" role="document">
-    <div class="modal-content bg-dark">
-      <div>
-        <button type="button" class="close pr-2" data-dismiss="modal">&times;</button>        
-      </div>  
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col align-items-center">
-            <img id="Picture" class="m-1 imageModal rounded-circle mx-auto d-block" style="max-width:70%;" alt="Avatar" src="">            
-          </div>
-          <div class="col" style="border-left-style: dashed; border-width: 1px;">
-            <div id="Name" class="m-1">
-                <h4></h4>                
-            </div>
-            <div id="Description"> </div>
-          </div>
-        </div>
-        <div class="row align-items-center m-1">          
-          <div class="col" style="border-top-style: dashed; border-width: 1px;">            
-            <div class="embed-responsive embed-responsive-16by9 m-1 videoModal">
-                <iframe class="embed-responsive-item" id="Video" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>            
-        </div>
-      </div>                                    
-    </div>
-  </div>
-</div>
-<script>  
-  $('#exampleModal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    var name = button.data('name') // Extract info from data-* attributes
-    var picture = button.data('picture')
-    var video = button.data('video')
-    var description = button.data('description') 
+    $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var name = button.data('name') // Extract info from data-* attributes
+        var picture = button.data('picture')
+        var video = button.data('video')
+        var description = button.data('description') 
+        
+        
     
-    
-
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this)
-    modal.find("#Video").attr("src", video + '?controls=0&amp;start=1');
-    modal.find("#Picture").attr("src", picture);
-    modal.find("#Description").text(decodeURIComponent(description));
-    modal.find("#Name h4").html(decodeURIComponent(name));
-    
-  })
-</script>
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this)
+        modal.find("#Video").attr("src", video + '?controls=0&amp;start=1');
+        modal.find("#Picture").attr("src", picture);
+        modal.find("#Description").text(decodeURIComponent(description));
+        modal.find("#Name h4").html(decodeURIComponent(name));
+        
+      })
