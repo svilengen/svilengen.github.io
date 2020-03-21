@@ -33,9 +33,9 @@
             $.each(data, function(index, scheduleEntry) {
                 var dayOfWeek = scheduleEntry[0];
                 html += '<div class="col mb-4">';
-                // html += '<h5 style="text-align:center;background-color: transparent;">';
+                html += '<h6 class="text-center">';
                 html += dayOfWeek;
-                // html += '</h5>';
+                html += '</h6>';
                 $.each(scheduleEntry[1], function(index, entry) {
                     var time = entry.Time;
                     var color = entry.Color;
