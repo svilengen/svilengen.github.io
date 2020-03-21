@@ -47,9 +47,11 @@
                     var picture = entry.Picture;
 
 
-                    var cardClass = 'card-dark text-center card-shadow rounded mt-2 card-select-class';
+                    var cardClass = 'text-center card-shadow rounded mt-2 card-select-class';
                     if (index % 2 == 0) {
-                        cardClass = 'card bg-dark text-center card-shadow rounded mt-2 card-select-class';
+                        cardClass += ' card bg-dark';
+                    } else {
+                        cardClass += ' card-dark';
                     }
                     html += '<div class="' + cardClass + '" name="' + sport.replace(/\s+/g, '') + '">';
                     html +=     '<div class="card-body p-1">';
