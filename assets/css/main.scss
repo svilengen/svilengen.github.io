@@ -62,9 +62,11 @@ $body-color: white;
 @keyframes activeCard {
     from {
         transform: translateY(0px);
+        font-weight: normal;
     }
     to {
         transform: translateY(4px);
+        font-weight: bolder;
     }
 }
 
