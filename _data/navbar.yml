@@ -1,12 +1,18 @@
 - name: Цени
   link: /prices.html
+  icon: <i class="fas fa-euro-sign"></i>
 - name: Групови занимания Вазов
   link: /schedule.html?location=vazov
+  icon: <i class="far fa-calendar-alt"></i>
 - name: Групови занимания Люлин 
   link: /schedule.html
+  icon: <i class="far fa-calendar-alt"></i>
 - name: Треньори
   link: /trainers.html
+  icon: <i class="fas fa-dumbbell"></i>
 - name: Дрехи 
   link: /clothing.html
+  icon: <i class="fas fa-tshirt"></i>
 - name: Важна Информация
   link: /info.html
+  icon: <i class="fas fa-info"></i>
