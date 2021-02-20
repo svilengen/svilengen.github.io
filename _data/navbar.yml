@@ -1,4 +1,12 @@
-- name: Групови занимания Люлин 
-  link: /
+- name: Цени
+  link: /prices.html
 - name: Групови занимания Вазов
-  link: /?location=vazov
+  link: /schedule.html?location=vazov
+- name: Групови занимания Люлин 
+  link: /schedule.html
+- name: Треньори
+  link: /trainers.html
+- name: Дрехи 
+  link: /clothing.html
+- name: Важна Информация
+  link: /info.html
