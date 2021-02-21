@@ -29,23 +29,32 @@ $.ajax({
         eval(response);
         var html = '';
         var count = 0;
-        
+
         $.each(data, function (index, scheduleEntry) {
             ++count;
             console.log(count);
             var name = scheduleEntry['name'];
             var price = scheduleEntry['price'];
             var bcgrColor = 'black';
-            if (count%2 == 0 ) {
+            if (count % 2 == 0) {
                 bcgrColor = 'grey';
             }
-            html += '<div class="row" style="background-color: ' + bcgrColor+ '">';
+            html += '<div class="row" style="background-color: ' + bcgrColor + '">';
+            if (price != '') {
                 html += '<div class="col-sm" style="border-right: 1px solid white; border-bottom: 1px solid white;">';
                 html += name;
                 html += '</div>';
                 html += '<div class="col-sm" style="border-left: 1px solid white;  border-bottom: 1px solid white;">';
                 html += price + ' лв';
                 html += '</div>';
+            } else {
+                html += '<div class="col-sm" style="text-align: center; padding: 5px;">';
+                html += '<h1>';
+                html += name;
+                html += '</h1>';
+                html += '</div>';                
+            }
+
             html += '</div>';
         });
         $('#content').append(html);
