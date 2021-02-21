@@ -1,15 +1,15 @@
 <div class="container">
   <nav class="navbar navbar-expand-lg">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-      <a class="navbar-brand" href="/">
-        <img width="50px" class="navbar-brand"
-          src="https://www.fitnesstitanium.bg/wp-content/uploads/2019/09/logo-light-new.png" />
-      </a>
+      <div class="text-center">
+        <a href="/">
+          <img width="50px" src="https://www.fitnesstitanium.bg/wp-content/uploads/2019/09/logo-light-new.png" />
+        </a>
+      </div>
       <div class="navbar-nav">
         {% for item in site.data.navbar %}
         <a class="nav-item nav-link" href="{{item.link}}">
