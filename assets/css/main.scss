@@ -95,6 +95,54 @@ $link-hover-color:           rgb(112, 116, 112); //gray
     box-shadow: 0px 0px 10px 1px black;    
 }
 
+/* Clothing */
+.product-grid {
+    display: grid;
+ 
+   /* define the number of grid columns */
+   // grid-template-columns: repeat(6, 3fr);
+   grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+   padding: 20px;
+   grid-gap: 20px;
+ }
+
+.card-title {       
+   padding: 5px;
+   min-height: 75px;
+   text-align: center;
+   margin-bottom: 0px !important;
+   
+}
+
+
+.card-price {    
+    padding: 5px;    
+    text-align: center;
+}
+
+.card-text {
+   padding: 5px;   
+   text-align: center;
+
+}
+
+.dotted-hr {
+    border: 0.5px dashed white;
+}
+
+.clothingImageModal {
+    padding: 0.1rem;     
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px 1px black;    
+}
+
+.card-img-top {
+    // width: 100%;
+    height: 20vw;        
+    object-fit: cover;
+    object-position: top;
+}
 
 
 // Bootstrap and its default variables
