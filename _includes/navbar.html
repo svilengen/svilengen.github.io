@@ -12,11 +12,13 @@
       </a>
       <div class="navbar-nav">
         {% for item in site.data.navbar %}
-        <a class="nav-item nav-link" href="{{item.link}}">          
+        <a class="nav-item nav-link" href="{{item.link}}">
           <div class="icon text-center fa-2x">
             {{ item.icon }}
           </div>
-          {{ item.short }}
+          <div class="icon text-center">
+            {{ item.short }}
+          </div>
         </a>
         {% endfor %}
       </div>
