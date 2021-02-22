@@ -145,6 +145,10 @@ $link-hover-color:           rgb(112, 116, 112); //gray
     object-position: top;
 }
 
+.nav-active {
+    border-top: 5px solid white;
+}
+
 
 // Bootstrap and its default variables
 @import "bootstrap/bootstrap";

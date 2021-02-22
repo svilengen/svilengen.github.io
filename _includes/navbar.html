@@ -10,10 +10,9 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-
       <div class="navbar-nav">
-        {% for item in site.data.navbar %}
-        <a class="nav-item nav-link" href="{{item.link}}">
+        {% for item in site.data.navbar %}        
+        <a class="nav-item nav-link {% if item.link == page.url %}nav-active{% endif %}" href="{{item.link}}">
           <div class="icon text-center fa-2x">
             {{ item.icon }}
           </div>
