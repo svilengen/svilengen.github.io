@@ -4,11 +4,11 @@
   icon: <i class="fas fa-euro-sign"></i>
 - name: Групови занимания Вазов
   short: Вазов
-  link: /schedule.html?location=vazov
+  link: /schedule_vazov.html
   icon: <i class="far fa-calendar-alt"></i>
 - name: Групови занимания Люлин
   short: Люлин
-  link: /schedule.html
+  link: /schedule_lulin.html
   icon: <i class="far fa-calendar-alt"></i>
 - name: Треньори
   short: Треньори
