@@ -1,7 +1,7 @@
 <div class="container" style="width: 100%;">
   <nav class="navbar navbar-expand-lg">
     <div class="text-center">
-      <a href="/">
+      <a href="/{{ page.location }}">
         <img width="50px" src="https://www.fitnesstitanium.bg/wp-content/uploads/2019/09/logo-light-new.png" />
       </a>
     </div>
@@ -11,8 +11,12 @@
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        {% for item in site.data.navbar %}        
-        <a class="nav-item nav-link {% if item.link == page.url %}nav-active{% endif %}" href="{{item.link}}">
+        {% for item in site.data.navbar %}
+        {% if item.location != nil and item.location != page.location %}
+        {% continue %}
+        {% endif %}
+        {% assign buildLink = "/" | append: page.location | append: "/" | append: item.link %}
+        <a class="nav-item nav-link {% if buildLink == page.url %}nav-active{% endif %}" href="{{item.link}}">
           <div class="icon text-center fa-2x">
             {{ item.icon }}
           </div>

@@ -1,0 +1,29 @@
+---
+layout: index
+title: Фитнес Титаниум Kiosk
+location: lulin
+---
+<div class="text-center">
+  <a class="navbar-brand" href="/">
+    <img width="50%" class="navbar-brand"
+      src="https://www.fitnesstitanium.bg/wp-content/uploads/2019/09/logo-light-new.png" />
+  </a>
+</div>
+<div class="card-columns" style="padding-left: 20px; padding-right: 20px;">
+  {% for item in site.data.navbar %}
+  {% if item.location != nil and item.location != page.location %}
+  {% continue %}
+  {% endif %}
+  <a href="{{item.link}}">
+    <div class="card bg-transparent border-light">
+      <div class="icon text-center fa-5x">
+        {{ item.icon }}
+      </div>
+      <div class="card-body text-center">
+        {{ item.name }}
+      </div>
+    </div>
+  </a>
+
+  {% endfor %}
+</div>
