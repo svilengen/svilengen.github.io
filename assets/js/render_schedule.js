@@ -52,15 +52,15 @@ $.ajax({
                 }
                 html += '<div class="' + cardClass + '" name="' + sport.replace(/\s+/g, '') + '">';
                 html += '<div class="card-body p-1">';
-                html += '<h6 class="card-title">';
+                html += '<p>';
                 html += time;
-                html += '</h6>';
-                html += '<p class="card-text">'
-                html += sport;
                 html += '</p>';
-                html += '<button  type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-name="' + name + '" data-picture="' + picture + '" data-video="' + video + '" data-description="' + encodedDescription + '">';
-                html += name;
+                html += '<button  type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-name="' + sport + '" data-picture="' + picture + '" data-video="' + video + '" data-description="' + encodedDescription + '" data-trainerName="' + name + '">';
+                html += sport;
                 html += '</button>';
+                html += '<p class="card-text">'
+                html += name;
+                html += '</p>';
                 html += '</div>';
                 html += '</div>';
 
@@ -111,6 +111,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
     var picture = button.data('picture')
     var video = button.data('video')
     var description = button.data('description')
+    var trainerName = button.data('trainername')
 
 
 
@@ -121,5 +122,6 @@ $('#exampleModal').on('show.bs.modal', function (event) {
     modal.find("#Picture").attr("src", picture);
     modal.find("#Description").text(decodeURIComponent(description));
     modal.find("#Name h4").html(decodeURIComponent(name));
+    modal.find("#TrainerName").html(decodeURIComponent(trainerName));
 
 })
