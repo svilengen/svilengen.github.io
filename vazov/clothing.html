@@ -5,7 +5,15 @@ location: vazov
 ---
 <script defer src="/assets/js/render_clothing.js"></script>
 
+<script>
+    function changeImgSrc(event) {
+        var img = $(event.currentTarget);
+        console.log(img[0]);
+        console.log(img[0].currentSrc);
 
+        $("#Picture").attr("src", img[0].currentSrc);
+    }
+</script>
 <div id="content" class="product-grid"></div>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
@@ -16,6 +24,14 @@ location: vazov
             </div>
             <div class="container">
                 <div class="row align-items-center">
+                    <div class="col">                        
+                        <img id="Pic2" class="m-1 clothingImageModal mx-auto d-block" style="max-width:30%;"
+                            alt="Avatar" src="" onclick="changeImgSrc(event)">
+                        <img id="Pic3" class="m-1 clothingImageModal mx-auto d-block" style="max-width:30%;"
+                            alt="Avatar" src="" onclick="changeImgSrc(event)">
+                        <img id="Pic4" class="m-1 clothingImageModal mx-auto d-block" style="max-width:30%;"
+                            alt="Avatar" src="" onclick="changeImgSrc(event)">
+                    </div>
                     <div class="col align-items-center">
                         <img id="Picture" class="m-1 clothingImageModal mx-auto d-block" style="max-width:70%;"
                             alt="Avatar" src="">

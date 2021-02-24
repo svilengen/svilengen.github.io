@@ -34,11 +34,14 @@ $.ajax({
             var description = scheduleEntry['description'];
             var price = scheduleEntry['price'];
             var pic = scheduleEntry['pic'];
+            var pic2 = scheduleEntry['pic2'];
+            var pic3 = scheduleEntry['pic3'];
+            var pic4 = scheduleEntry['pic4'];
             var bcgrColor = 'black';
             html += '<div class="card bg-dark card-shadow">';
             
 
-            html += '<a href="#" data-toggle="modal" data-target="#exampleModal" data-name="' + name + '" data-picture="' + pic + '">';
+            html += '<a href="#" data-toggle="modal" data-target="#exampleModal" data-name="' + name + '" data-picture="' + pic + '" data-pic2="' + pic2 + '" data-pic3="' + pic3 + '" data-pic4="' + pic4 + '">';
             html += '<img src="' + pic + '" alt="' + name + '" class="card-img-top"></img>';
             html += '</a>';
             html += '<div class="card-body">';
@@ -66,11 +69,17 @@ $('#exampleModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
     var name = button.data('name') // Extract info from data-* attributes
     var picture = button.data('picture')   
+    var pic2 = button.data('pic2')
+    var pic3 = button.data('pic3')
+    var pic4 = button.data('pic4')
     
 
     // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
     // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
     var modal = $(this)    
     modal.find("#Picture").attr("src", picture);
+    modal.find("#Pic2").attr("src", pic2);
+    modal.find("#Pic3").attr("src", pic3);
+    modal.find("#Pic4").attr("src", pic4);
 })
 
