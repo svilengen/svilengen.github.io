@@ -7,9 +7,12 @@ location: vazov
 
 <script>
     function changeImgSrc(event) {
-        var img = $(event.currentTarget);        
+        var img = $(event.currentTarget);
+        $("img").removeClass("clothingImageModalActiveThumb");  
+        $(img).addClass("clothingImageModalActiveThumb");  
 
-        $("#Picture").attr("src", img[0].currentSrc);        
+        $("#Picture").attr("src", img[0].currentSrc);
+        
     }
 </script>
 <div id="content" class="product-grid"></div>
