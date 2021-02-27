@@ -7,9 +7,7 @@ location: vazov
 
 <script>
     function changeImgSrc(event) {
-        var img = $(event.currentTarget);
-        console.log(img[0]);
-        console.log(img[0].currentSrc);
+        var img = $(event.currentTarget);        
 
         $("#Picture").attr("src", img[0].currentSrc);
     }
@@ -26,8 +24,10 @@ location: vazov
                     <div class="col">                        
                         <img id="Pic2" class="m-1 clothingImageModal mx-auto d-block" style="max-width:30%;"
                             alt="Avatar" src="" onclick="changeImgSrc(event)">
+                        <hr class="dotted-hr"/>
                         <img id="Pic3" class="m-1 clothingImageModal mx-auto d-block" style="max-width:30%;"
                             alt="Avatar" src="" onclick="changeImgSrc(event)">
+                        <hr class="dotted-hr"/>
                         <img id="Pic4" class="m-1 clothingImageModal mx-auto d-block" style="max-width:30%;"
                             alt="Avatar" src="" onclick="changeImgSrc(event)">
                     </div>
