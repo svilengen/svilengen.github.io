@@ -78,6 +78,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
     // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
     var modal = $(this)    
     modal.find("#Picture").attr("src", picture);
+    modal.find("#Picture_thumb").attr("src", picture);
     modal.find("#Pic2").attr("src", pic2);
     modal.find("#Pic3").attr("src", pic3);
     modal.find("#Pic4").attr("src", pic4);
