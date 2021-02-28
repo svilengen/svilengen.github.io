@@ -17,6 +17,13 @@
     <script defer src="/assets/js/render_clothing.js"></script>
   
     <script>
+      window.onload = function () {
+          $(".modal").on("hidden.bs.modal", function () {
+            $('img').each(function () {
+              $(this).removeClass("clothingImageModalActiveThumb");
+            });
+          });
+        }
       function changeImgSrc(event) {
 
         $('img').each(function () {
@@ -30,6 +37,7 @@
 
       }
     </script>
+    
     <div id="content" class="product-grid"></div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
