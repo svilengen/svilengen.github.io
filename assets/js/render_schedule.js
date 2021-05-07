@@ -52,16 +52,15 @@ $.ajax({
                 }
                 html += '<div class="' + cardClass + ' cols-2" name="' + sport.replace(/\s+/g, '') + '">';
                 html += '<div style="display: flex; " class="align-items-center">';
-                html += '<div class="text-nowrap">';
+                html += '<div class="text-nowrap p-2">';
                 html += time;
                 html += '</div>';
                 html += '<div class="card-body p-0" style="width: 100%;">';
                 html += '<button  type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal" data-name="' + sport + '" data-picture="' + picture + '" data-video="' + video + '" data-description="' + encodedDescription + '" data-trainerName="' + name + '">';
+                html += '<span style="text-decoration:underline; text-decoration-style: dotted;">';
                 html += sport;
+                html += '</span>';
                 html += '</button>';
-                // html += '<p class="card-text">'
-                // html += name;
-                // html += '</p>';
                 html += '</div>';
                 html += '</div>';
                 html += '</div>';
