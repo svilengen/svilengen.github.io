@@ -13,41 +13,7 @@ $link-hover-color:           rgb(112, 116, 112); //gray
 	color: rgb(112, 116, 112);
 }
 
-/* Style and animated centered loader */
-.loader {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
-    border: 16px solid #616161;
-    border-radius: 50%;
-    border-top: 16px solid black;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-}
 
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
 .card-shadow {
     // h-offset v-offset blur spread color
@@ -63,7 +29,7 @@ $link-hover-color:           rgb(112, 116, 112); //gray
     animation-name: activeCard;
     animation-duration: 0.5s;
     box-shadow: 0px 0px 10px 8px rgba(255, 255, 255, 1) !important;    
-    transform: translateY(4px);
+    transform: translateY(-4px);
     font-weight: bolder;
 }
 
@@ -73,7 +39,7 @@ $link-hover-color:           rgb(112, 116, 112); //gray
         font-weight: normal;
     }
     to {
-        transform: translateY(4px);
+        transform: translateY(-4px);
         font-weight: bolder;
     }
 }
@@ -122,8 +88,10 @@ $link-hover-color:           rgb(112, 116, 112); //gray
 }
 
 .card-text {
-   padding: 5px;   
+   padding: 0px;   
    text-align: center;
+   color: yellow;
+   font-variant: small-caps;
 
 }
 
@@ -153,6 +121,41 @@ $link-hover-color:           rgb(112, 116, 112); //gray
     border: 1px solid white;
 }
 
+/* Style and animated centered loader */
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #616161;
+    border-radius: 50%;
+    border-top: 16px solid black;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 // Bootstrap and its default variables
 @import "bootstrap/bootstrap";

@@ -50,17 +50,19 @@ $.ajax({
                 } else {
                     cardClass += ' card-dark';
                 }
-                html += '<div class="' + cardClass + '" name="' + sport.replace(/\s+/g, '') + '">';
-                html += '<div class="card-body p-1">';
-                html += '<p>';
+                html += '<div class="' + cardClass + ' cols-2" name="' + sport.replace(/\s+/g, '') + '">';
+                html += '<div style="display: flex; " class="align-items-center">';
+                html += '<div class="text-nowrap">';
                 html += time;
-                html += '</p>';
-                html += '<button  type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-name="' + sport + '" data-picture="' + picture + '" data-video="' + video + '" data-description="' + encodedDescription + '" data-trainerName="' + name + '">';
+                html += '</div>';
+                html += '<div class="card-body p-0" style="width: 100%;">';
+                html += '<button  type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal" data-name="' + sport + '" data-picture="' + picture + '" data-video="' + video + '" data-description="' + encodedDescription + '" data-trainerName="' + name + '">';
                 html += sport;
                 html += '</button>';
-                html += '<p class="card-text">'
-                html += name;
-                html += '</p>';
+                // html += '<p class="card-text">'
+                // html += name;
+                // html += '</p>';
+                html += '</div>';
                 html += '</div>';
                 html += '</div>';
 
