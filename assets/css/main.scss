@@ -30,17 +30,14 @@ $link-hover-color:           rgb(112, 116, 112); //gray
     animation-duration: 0.5s;
     box-shadow: 0px 0px 10px 8px rgba(255, 255, 255, 1) !important;    
     transform: translateY(-4px);
-    font-weight: bolder;
 }
 
 @keyframes activeCard {
     from {
-        transform: translateY(0px);
-        font-weight: normal;
+        transform: translateY(0px);        
     }
     to {
         transform: translateY(-4px);
-        font-weight: bolder;
     }
 }
 
