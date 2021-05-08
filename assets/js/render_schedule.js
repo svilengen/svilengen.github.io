@@ -50,7 +50,7 @@ $.ajax({
                 } else {
                     cardClass += ' card-dark';
                 }
-                html += '<div class="' + cardClass + ' cols-2" name="' + sport.replace(/\s+/g, '') + '">';
+                html += '<div class="' + cardClass + '" name="' + sport.replace(/\s+/g, '') + '">';
                 html += '<div style="display: flex; " class="align-items-center">';
                 html += '<div class="text-nowrap p-2">';
                 html += time;
