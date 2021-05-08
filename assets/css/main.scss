@@ -1,5 +1,8 @@
 ---
 ---
+.nooverflow {
+    overflow: hidden !important;
+  }
 
 // Your variable overrides
 $body-bg: #000;
