@@ -50,9 +50,7 @@ $.ajax({
                 html += '</div>';
             } else {
                 html += '<div class="col-sm item-header">';
-                html += '<h1>';
                 html += name;
-                html += '</h1>';
                 html += '</div>';                
             }
 

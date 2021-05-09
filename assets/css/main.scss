@@ -41,9 +41,12 @@ $link-hover-color:           rgb(112, 116, 112); //gray
 }
 
 .item-header {
+    font-size: 3em; 
     text-transform: uppercase;
     text-align: center; 
     padding: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .prices-container {
