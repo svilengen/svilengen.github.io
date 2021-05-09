@@ -55,7 +55,7 @@ $.ajax({
                 html += '<div class="text-nowrap p-2">';
                 html += time;
                 html += '</div>';
-                html += '<div class="card-body p-0" style="text-align: left; width: 100%;">';
+                html += '<div class="card-body p-0" style="text-align: left; width: 100%; text-transform: capitalize;">';
                 html += '<a data-toggle="modal" href="#exampleModal" data-name="' + sport + '" data-picture="' + picture + '" data-video="' + video + '" data-description="' + encodedDescription + '" data-trainerName="' + name + '">';
                 html += sport;
                 html += '</a>';
