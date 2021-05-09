@@ -1,30 +1,30 @@
 - name: Цени
   short: Цени
   link: prices.html
-  icon: <i class="fas fa-euro-sign"></i>
+  icon: <i class="fas fa-euro-sign fa-fw"></i>
   location:
 - name: Групови занимания Вазов
   short: График
   link: schedule.html
-  icon: <i class="far fa-calendar-alt"></i>
+  icon: <i class="far fa-calendar-alt fa-fw"></i>
   location: vazov
 - name: Групови занимания Люлин
   short: График
   link: schedule.html
-  icon: <i class="far fa-calendar-alt"></i>
+  icon: <i class="far fa-calendar-alt fa-fw"></i>
   location: lulin
 - name: Треньори
   short: Треньори
   link: trainers.html
-  icon: <i class="fas fa-dumbbell"></i>
+  icon: <i class="fas fa-dumbbell fa-fw"></i>
   location:
 - name: Дрехи 
   short: Дрехи
   link: clothing.html
-  icon: <i class="fas fa-tshirt"></i>
+  icon: <i class="fas fa-tshirt fa-fw"></i>
   location:
 - name: Важна Информация
   short: Инфо
   link: info.html
-  icon: <i class="fas fa-info"></i>
+  icon: <i class="fas fa-info fa-fw"></i>
   location:
