@@ -39,16 +39,17 @@ $.ajax({
             if (count % 2 == 0) {
                 bcgrColor = 'grey';
             }
-            html += '<div class="row" style="background-color: ' + bcgrColor + '">';
+            html += '<div class="row" style="background-color: ' + bcgrColor + ';">';
             if (price != '') {
-                html += '<div class="col-sm" style="border-right: 1px solid white; border-bottom: 1px solid white;">';
+                html += '<div class="col-sm item-name-col">';
                 html += name;
                 html += '</div>';
-                html += '<div class="col-sm" style="border-left: 1px solid white;  border-bottom: 1px solid white;">';
-                html += price + ' лв';
+                html += '<div class="col-sm item-price-col">';
+                html += price;
+                html += '<span style="font-size: initial;"> &nbsp;лв</span>';                
                 html += '</div>';
             } else {
-                html += '<div class="col-sm" style="text-align: center; padding: 5px;">';
+                html += '<div class="col-sm item-header">';
                 html += '<h1>';
                 html += name;
                 html += '</h1>';
