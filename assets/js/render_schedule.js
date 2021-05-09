@@ -49,14 +49,14 @@ $.ajax({
                 var video = entry.Video;
                 var picture = entry.Picture;
 
-                var cardClass = 'text-center card-shadow rounded mt-2 card-select-class';
+                var cardClass = 'text-center card-shadow rounded mt-3 card-select-class';
                 if (index % 2 == 0) {
                     cardClass += ' card bg-dark';
                 } else {
                     cardClass += ' card-dark';
                 }
                 html += '<div class="' + cardClass + '" name="' + sport.replace(/\s+/g, '') + '">';
-                html += '<div style="display: flex; " class="align-items-center">';
+                html += '<div style="display: flex; padding: 2px;" class="align-items-center">';
                 html += '<div class="text-nowrap schedule-card-time">';
                 html += time;
                 html += '</div>';
