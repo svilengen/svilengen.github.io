@@ -35,6 +35,12 @@ $.ajax({
             html += '</h6>';
             $.each(scheduleEntry[1], function (index, entry) {
                 var time = entry.Time;
+                var timeOfDayIconClass = "fas fa-sun";
+                var hours = time.split(":")[0];
+                if (hours > 16) {                    
+                    timeOfDayIconClass ="fas fa-moon";
+                } 
+
                 var color = entry.Color;
                 var sport = entry.Sport;
                 var name = entry.Name;
@@ -42,7 +48,6 @@ $.ajax({
                 var encodedDescription = encodeURIComponent(entry.Description);
                 var video = entry.Video;
                 var picture = entry.Picture;
-
 
                 var cardClass = 'text-center card-shadow rounded mt-2 card-select-class';
                 if (index % 2 == 0) {
@@ -52,10 +57,11 @@ $.ajax({
                 }
                 html += '<div class="' + cardClass + '" name="' + sport.replace(/\s+/g, '') + '">';
                 html += '<div style="display: flex; " class="align-items-center">';
-                html += '<div class="text-nowrap p-2">';
+                html += '<div class="text-nowrap schedule-card-time">';
                 html += time;
                 html += '</div>';
-                html += '<div class="card-body p-0" style="text-align: left; width: 100%; text-transform: capitalize;">';
+                html += '<i class="'+ timeOfDayIconClass + '"></i>';
+                html += '<div class="schedule-card-text">';
                 html += '<a data-toggle="modal" href="#exampleModal" data-name="' + sport + '" data-picture="' + picture + '" data-video="' + video + '" data-description="' + encodedDescription + '" data-trainerName="' + name + '">';
                 html += sport;
                 html += '</a>';
