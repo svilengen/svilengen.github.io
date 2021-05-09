@@ -4,4 +4,5 @@ $(document).ajaxStart(function() {
 
 $(document).ajaxStop(function() {
     $("#loader").hide();
+    $("#disclaimer").show();
 });
