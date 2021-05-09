@@ -29,7 +29,7 @@ $.ajax({
         var html = '';
         $.each(data, function (index, scheduleEntry) {
             var dayOfWeek = scheduleEntry[0];
-            html += '<div class="col">';
+            html += '<div class="col" style="margin: 5px; padding: 0px !important;">';
             html += '<h6 class="text-center">';
             html += dayOfWeek;
             html += '</h6>';
