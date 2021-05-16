@@ -20,6 +20,15 @@ $link-hover-color:           rgb(112, 116, 112); //gray
     padding-right: 20px;
 }
 
+@media (max-width: 1400px) {
+    .main-menu {
+        column-count: 1; 
+        padding-top: 100px; 
+        padding-left: 20px; 
+        padding-right: 20px;
+    }
+}
+
 .item-name-col {
     font-size: 1.25em; 
     padding-bottom: 2px; 
