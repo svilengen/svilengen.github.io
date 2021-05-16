@@ -1,4 +1,10 @@
 title: "Fitness Titanium Kiosk Website" # the name of your site, e.g. ACME Corp.
 
+defaults:
+  - scope:
+      path: "assets/images/screensaver"
+    values:
+      image: true
+
 sass:
   sass_dir: assets/css
