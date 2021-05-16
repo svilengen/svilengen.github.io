@@ -2,7 +2,7 @@ title: "Fitness Titanium Kiosk Website" # the name of your site, e.g. ACME Corp.
 
 defaults:
   - scope:
-      path: "assets/images/screensaver"
+      path: "assets/images"
     values:
       image: true
 
