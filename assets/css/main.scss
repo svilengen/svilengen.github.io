@@ -4,10 +4,9 @@
 // Your variable overrides
 $body-bg: #000;
 $body-color: white;
-
-
 $link-color:                 rgb(255, 255, 255); //white
 $link-hover-color:           rgb(112, 116, 112); //gray
+$font-size-base: 1.5rem;
 
 .icon:hover{
 	color: rgb(112, 116, 112);
@@ -29,8 +28,7 @@ $link-hover-color:           rgb(112, 116, 112); //gray
     }
 }
 
-.item-name-col {
-    font-size: 1.25em; 
+.item-name-col {    
     padding-bottom: 2px; 
     border-right: 1px solid white; 
     border-bottom: 1px solid white;
@@ -41,7 +39,6 @@ $link-hover-color:           rgb(112, 116, 112); //gray
 }
 
 .item-price-col {
-    font-size: 1.5em; 
     border-left: 1px solid white;  
     border-bottom: 1px solid white;
     display: flex;
@@ -50,7 +47,6 @@ $link-hover-color:           rgb(112, 116, 112); //gray
 }
 
 .item-header {
-    font-size: 3em; 
     text-transform: uppercase;
     text-align: center; 
     padding: 5px;
@@ -140,6 +136,7 @@ $link-hover-color:           rgb(112, 116, 112); //gray
    min-height: 75px;
    text-align: center;
    margin-bottom: 0px !important;
+   font-variant-caps: titling-caps;
    
 }
 
@@ -151,9 +148,8 @@ $link-hover-color:           rgb(112, 116, 112); //gray
 
 .card-text {
    padding: 0px;   
-   text-align: center;
-   font-variant: small-caps;
-
+   text-align: center;      
+   font-variant-caps: titling-caps;
 }
 
 .dotted-hr {

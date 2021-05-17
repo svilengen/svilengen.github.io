@@ -46,12 +46,12 @@ $.ajax({
                 html += '</div>';
                 html += '<div class="col-sm item-price-col">';
                 html += price;
-                html += '<span style="font-size: initial;"> &nbsp;лв</span>';                
+                html += '<span>&nbsp;лв</span>';                
                 html += '</div>';
             } else {
-                html += '<div class="col-sm item-header">';
+                html += '<h3 class="col-sm item-header">';
                 html += name;
-                html += '</div>';                
+                html += '</h3>';                
             }
 
             html += '</div>';

@@ -41,9 +41,9 @@ $.ajax({
             html += '<img src="' + pic + '" alt="' + name + '" class="card-img-top"></img>';
             html += '</a>';
             html += '<div class="card-body">';
-            html += '<h5 class="card-title">';
+            html += '<h6 class="card-title">';
             html += name;
-            html += '</h5>';         
+            html += '</h6>';
             html += '<hr class="dotted-hr"/>';
             html += '<p class="card-text">';
             html += description;
