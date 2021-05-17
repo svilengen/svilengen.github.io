@@ -12,19 +12,24 @@ $font-size-base: 1.25rem;
 	color: rgb(112, 116, 112);
 }
 
-.main-menu {
-    column-count: 5; 
-    padding-top: 100px; 
-    padding-left: 20px; 
-    padding-right: 20px;
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 100%;
 }
 
-@media (max-width: 1400px) {
-    .main-menu {
-        column-count: 1; 
-        padding-top: 100px; 
-        padding-left: 20px; 
-        padding-right: 20px;
+@media (min-width: 1400px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
     }
 }
 
