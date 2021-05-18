@@ -3,12 +3,12 @@
   link: prices.html
   icon: <i class="fas fa-euro-sign fa-fw"></i>
   location:
-- name: Групови занимания Вазов
+- name: Групови занимания
   short: График
   link: schedule.html
   icon: <i class="far fa-calendar-alt fa-fw"></i>
   location: vazov
-- name: Групови занимания Люлин
+- name: Групови занимания
   short: График
   link: schedule.html
   icon: <i class="far fa-calendar-alt fa-fw"></i>
