@@ -9,22 +9,19 @@ location: lulin
       src="https://www.fitnesstitanium.bg/wp-content/uploads/2019/09/logo-light-new.png" />
   </a>
 </div>
-<div class="container" style="padding-top: 100px;">
+<div class="container-fluid" style="padding-top: 100px;">
   <div class="row">
     {% for item in site.data.navbar %}
     {% if item.location != nil and item.location != page.location %}
     {% continue %}
     {% endif %}    
-    <div class="col-md-5ths" style="border: solid white 1px;">
-      <a href="{{item.link}}">
-        <div class="icon text-center fa-5x">          
-          {{ item.icon }}
-        </div>
-      </a>
-      <a href="{{item.link}}">
-        <div class="card-body text-center">
-          {{ item.name }}
-        </div>
+    <div class="col-md-5ths main-menu-col">
+      <div class="icon text-center fa-3x">          
+        <a href="{{item.link}}">{{ item.icon }}</a>
+      </div>            
+      <div class="card-body text-center">
+        <a href="{{item.link}}">{{ item.name }}</a>
+      </div>
       </a>
     </div>    
   {% endfor %}
