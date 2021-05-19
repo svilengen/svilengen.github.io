@@ -12,57 +12,43 @@ function getUrlVars() {
     return vars;
 }
 
-var theUrl = "https://script.google.com/macros/s/AKfycbzA5eUscvhx4vA-rkFtuuPmWfASmx5YzZV0sr5EVyWH7l5-Kqx0RDo_AA/exec";
+var datasource = "/datasource/clothing.json";
 
-var locationParameter = getUrlVars()["location"];
-if (typeof locationParameter !== "undefined" && (typeof locationParameter !== "object" || !locationParameter)) {
-    theUrl += '?location=' + locationParameter;
-}
+$.getJSON(datasource ,function( data ) {    
+    var html = '';
+    $.each(data, function (index, scheduleEntry) {
+        var name = scheduleEntry['name'];
+        var description = scheduleEntry['description'];
+        var price = scheduleEntry['price'];
+        var pic = scheduleEntry['pic'];
+        var pic2 = scheduleEntry['pic2'];
+        var pic3 = scheduleEntry['pic3'];
+        var pic4 = scheduleEntry['pic4'];
+        var bcgrColor = 'black';
+        html += '<div class="card bg-dark card-shadow">';
+        
 
-// var theUrl = "test/data.js";
+        html += '<a href="#" data-toggle="modal" data-target="#exampleModal" data-name="' + name + '" data-picture="' + pic + '" data-pic2="' + pic2 + '" data-pic3="' + pic3 + '" data-pic4="' + pic4 + '">';
+        html += '<img src="' + pic + '" alt="' + name + '" class="card-img-top"></img>';
+        html += '</a>';
+        html += '<div class="card-body">';
+        html += '<h6 class="card-title">';
+        html += name;
+        html += '</h6>';
+        html += '<hr class="dotted-hr"/>';
+        html += '<p class="card-price">';
+        html += price + '&nbsp;лв';
+        html += '</p>';
+        html += '<hr class="dotted-hr"/>';
+        html += '<p class="card-text">';
+        html += description;
+        html += '</p>';
+        html += '</div>';
 
-$.ajax({
-    type: "GET",
-    url: theUrl,
-    dataType: "text",
-    success: function (response) {
-        eval(response);
-        var html = '';
+        html += '</div>';
+    });
+    $('#content').append(html);
 
-        $.each(data, function (index, scheduleEntry) {
-            var name = scheduleEntry['name'];
-            var description = scheduleEntry['description'];
-            var price = scheduleEntry['price'];
-            var pic = scheduleEntry['pic'];
-            var pic2 = scheduleEntry['pic2'];
-            var pic3 = scheduleEntry['pic3'];
-            var pic4 = scheduleEntry['pic4'];
-            var bcgrColor = 'black';
-            html += '<div class="card bg-dark card-shadow">';
-            
-
-            html += '<a href="#" data-toggle="modal" data-target="#exampleModal" data-name="' + name + '" data-picture="' + pic + '" data-pic2="' + pic2 + '" data-pic3="' + pic3 + '" data-pic4="' + pic4 + '">';
-            html += '<img src="' + pic + '" alt="' + name + '" class="card-img-top"></img>';
-            html += '</a>';
-            html += '<div class="card-body">';
-            html += '<h6 class="card-title">';
-            html += name;
-            html += '</h6>';
-            html += '<hr class="dotted-hr"/>';
-            html += '<p class="card-price">';
-            html += price + '&nbsp;лв';
-            html += '</p>';
-            html += '<hr class="dotted-hr"/>';
-            html += '<p class="card-text">';
-            html += description;
-            html += '</p>';
-            html += '</div>';
-
-            html += '</div>';
-        });
-        $('#content').append(html);
-
-    }
 });
 
 $('#exampleModal').on('show.bs.modal', function (event) {
