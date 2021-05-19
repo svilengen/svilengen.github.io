@@ -12,49 +12,35 @@ function getUrlVars() {
     return vars;
 }
 
-var theUrl = "https://script.google.com/macros/s/AKfycbxMR2WQoaHPJKq_kloF856RkrhUu8HQ-QXf-x6QD1j4Ri40hINxx5M9lw/exec";
 
-var locationParameter = getUrlVars()["location"];
-if (typeof locationParameter !== "undefined" && (typeof locationParameter !== "object" || !locationParameter)) {
-    theUrl += '?location=' + locationParameter;
-}
 
-// var theUrl = "test/data.js";
+var datasource = "/datasource/trainers.json";
 
-$.ajax({
-    type: "GET",
-    url: theUrl,
-    dataType: "text",
-    success: function (response) {
-        eval(response);
-        var html = '';
+$.getJSON(datasource ,function( data ) {
+    var html = '';
+    $.each(data, function (index, scheduleEntry) {
+        var name = scheduleEntry['name'];
+        var description = scheduleEntry['description'];            
+        var pic = scheduleEntry['pic'];
+        var bcgrColor = 'black';
+        html += '<div class="card bg-dark card-shadow">';
+        html += '<a href="#" data-toggle="modal" data-target="#exampleModal" data-name="' + name + '" data-picture="' + pic + '">';
+        html += '<img src="' + pic + '" alt="' + name + '" class="card-img-top"></img>';
+        html += '</a>';
+        html += '<div class="card-body">';
+        html += '<h6 class="card-title">';
+        html += name;
+        html += '</h6>';
+        html += '<hr class="dotted-hr"/>';
+        html += '<p class="card-text">';
+        html += description;
+        html += '</p>';
+        html += '</div>';
 
-        $.each(data, function (index, scheduleEntry) {
-            var name = scheduleEntry['name'];
-            var description = scheduleEntry['description'];            
-            var pic = scheduleEntry['pic'];
-            var bcgrColor = 'black';
-            html += '<div class="card bg-dark card-shadow">';
-            
+        html += '</div>';
+    });
+    $('#content').append(html);
 
-            html += '<a href="#" data-toggle="modal" data-target="#exampleModal" data-name="' + name + '" data-picture="' + pic + '">';
-            html += '<img src="' + pic + '" alt="' + name + '" class="card-img-top"></img>';
-            html += '</a>';
-            html += '<div class="card-body">';
-            html += '<h6 class="card-title">';
-            html += name;
-            html += '</h6>';
-            html += '<hr class="dotted-hr"/>';
-            html += '<p class="card-text">';
-            html += description;
-            html += '</p>';
-            html += '</div>';
-
-            html += '</div>';
-        });
-        $('#content').append(html);
-
-    }
 });
 
 $('#exampleModal').on('show.bs.modal', function (event) {
