@@ -25,7 +25,7 @@ $.getJSON(datasource ,function( data ) {
             if (count % 2 == 0) {
                 bcgrColor = 'grey';
             }
-            html += '<div class="row" style="background-color: ' + bcgrColor + ';">';
+            html += '<div class="row" style="padding-left:10px; background-color: ' + bcgrColor + ';">';
             if (price != '') {
                 html += '<div class="col-sm-10 item-name-col">';
                 html += name;
