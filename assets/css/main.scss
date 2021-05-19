@@ -43,19 +43,14 @@ $font-size-base: 1.25rem;
 }
 
 
-.item-name-col {    
-    padding-bottom: 2px; 
-    border-right: 1px solid white; 
-    border-bottom: 1px solid white;
+.item-name-col {        
     text-transform: capitalize;
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
-.item-price-col {
-    border-left: 1px solid white;  
-    border-bottom: 1px solid white;
+.item-price-col {    
     display: flex;
     justify-content: left;
     align-items: center;

@@ -27,10 +27,10 @@ $.getJSON(datasource ,function( data ) {
             }
             html += '<div class="row" style="background-color: ' + bcgrColor + ';">';
             if (price != '') {
-                html += '<div class="col-sm item-name-col">';
+                html += '<div class="col-sm-10 item-name-col">';
                 html += name;
                 html += '</div>';
-                html += '<div class="col-sm item-price-col">';
+                html += '<div class="col-sm-2 item-price-col">';
                 html += price;
                 html += '<span>&nbsp;лв</span>';                
                 html += '</div>';
