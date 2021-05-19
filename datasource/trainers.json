@@ -1,1 +1,47 @@
-sss
+[
+  {
+    "name": "Мирослав",
+    "description": "персонален треньор - иван вазов",
+    "pic": "https://www.fitnesstitanium.bg/wp-content/uploads/2021/02/Miroslav.jpg"
+  },
+  {
+    "name": "Кристиан Паяков",
+    "description": "персонален треньор - слатина",
+    "pic": "https://www.fitnesstitanium.bg/wp-content/uploads/2019/10/Kris-2-1.jpg"
+  },
+  {
+    "name": "Ставри Гавазов",
+    "description": "персонален треньор - слатина",
+    "pic": "https://www.fitnesstitanium.bg/wp-content/uploads/2019/10/Stavri-2.jpg"
+  },
+  {
+    "name": "Даниел",
+    "description": "персонален треньор - слатина",
+    "pic": "https://www.fitnesstitanium.bg/wp-content/uploads/2019/10/Daniel-3.jpg"
+  },
+  {
+    "name": "Натали",
+    "description": "персонален треньор - люлин",
+    "pic": "https://www.fitnesstitanium.bg/wp-content/uploads/2019/10/%D0%9D%D0%B0%D1%82%D0%B0%D0%BB%D0%B8-3.jpg"
+  },
+  {
+    "name": "Стоян Стефанов",
+    "description": "персонален треньор - люлин",
+    "pic": "https://www.fitnesstitanium.bg/wp-content/uploads/2019/10/%D0%A1%D1%82%D0%BE%D1%8F%D0%BD.jpg"
+  },
+  {
+    "name": "Димитър Оряшков",
+    "description": "персонален треньор - младост",
+    "pic": "https://www.fitnesstitanium.bg/wp-content/uploads/2019/10/%D0%94%D0%B8%D0%BC%D0%B8%D1%82%D1%8A%D1%80-1.jpg"
+  },
+  {
+    "name": "Борислав Петков",
+    "description": "персонален треньор - младост",
+    "pic": "https://www.fitnesstitanium.bg/wp-content/uploads/2019/10/%D0%91%D0%BE%D0%B1%D0%B8-2.jpg"
+  },
+  {
+    "name": "Ивета Гальова",
+    "description": "персонален треньор - младост",
+    "pic": "https://www.fitnesstitanium.bg/wp-content/uploads/2019/12/%D0%98%D0%92%D0%95%D0%A2%D0%90-%D0%93%D0%90%D0%9B%D0%AC%D0%9E%D0%92%D0%90.jpg"
+  }
+]
