@@ -1,5 +1,23 @@
 [
   {
+    "name": "",
+    "description": "",
+    "price": "",
+    "pic": "",
+    "pic2": "",
+    "pic3": "",
+    "pic4": ""
+  },
+  {
+    "name": "Суитшърт с цип „Titanium“",
+    "description": "Суитшърта е подходящ за есенно-зимния сезон, както за мъже, така и за жени. Изключително здрава и устойчива материя, съчетана с мотивиращ дизайн.",
+    "price": 45,
+    "pic": "https://www.fitnesstitanium.bg/wp-content/uploads/2019/10/%D0%A1%D1%83%D0%B8%D1%82%D1%88%D1%8A%D1%80%D1%82-%D1%81-%D1%86%D0%B8%D0%BF-Titanium-1-683x1024.jpg",
+    "pic2": "https://www.fitnesstitanium.bg/wp-content/uploads/2019/10/%D0%A1%D1%83%D0%B8%D1%82%D1%88%D1%8A%D1%80%D1%82-%D1%81-%D1%86%D0%B8%D0%BF-Titanium-3-500x500.jpg",
+    "pic3": "https://www.fitnesstitanium.bg/wp-content/uploads/2019/10/%D0%A1%D1%83%D0%B8%D1%82%D1%88%D1%8A%D1%80%D1%82-%D1%81-%D1%86%D0%B8%D0%BF-Titanium-4.jpg",
+    "pic4": "https://www.fitnesstitanium.bg/wp-content/uploads/2019/10/%D0%A1%D1%83%D0%B8%D1%82%D1%88%D1%8A%D1%80%D1%82-%D1%81-%D1%86%D0%B8%D0%BF-Titanium-2-500x500.jpg"
+  },
+  {
     "name": "Суитшърт с цип „Titanium“",
     "description": "Суитшърта е подходящ за есенно-зимния сезон, както за мъже, така и за жени. Изключително здрава и устойчива материя, съчетана с мотивиращ дизайн.",
     "price": 45,
