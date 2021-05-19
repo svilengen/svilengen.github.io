@@ -12,103 +12,88 @@ function getUrlVars() {
     return vars;
 }
 
-var theUrl = "https://script.google.com/macros/s/AKfycbx1KkxeGTRLjobSQb202PM1ecSjD738ixJGMOWhMZD-JUX6-lM8/exec";
+var datasource = "/datasource/" + locationParameter + "/schedule.json";
 
+$.getJSON(datasource ,function( data ) {
+    var html = '';
+    $.each(data, function (index, scheduleEntry) {
+        var dayOfWeek = scheduleEntry[0];
+        html += '<div class="col" style="margin: 5px; padding: 0px !important;">';
+        html += '<h6 class="text-center">';
+        html += dayOfWeek;
+        html += '</h6>';
+        $.each(scheduleEntry[1], function (index, entry) {
+            var time = entry.Time;
+            var timeOfDayIconClass = "fas fa-sun";
+            var hours = time.split(":")[0];
+            if (hours > 16) {                    
+                timeOfDayIconClass ="fas fa-moon";
+            } 
 
-theUrl += '?location=' + locationParameter;
+            var color = entry.Color;
+            var sport = entry.Sport;
+            var name = entry.Name;
+            var encodedName = encodeURIComponent(name);
+            var encodedDescription = encodeURIComponent(entry.Description);
+            var video = entry.Video;
+            var picture = entry.Picture;
 
-
-// var theUrl = "test/data.js";
-
-$.ajax({
-    type: "GET",
-    url: theUrl,
-    dataType: "text",
-    success: function (response) {
-        eval(response);
-        var html = '';
-        $.each(data, function (index, scheduleEntry) {
-            var dayOfWeek = scheduleEntry[0];
-            html += '<div class="col" style="margin: 5px; padding: 0px !important;">';
-            html += '<h6 class="text-center">';
-            html += dayOfWeek;
-            html += '</h6>';
-            $.each(scheduleEntry[1], function (index, entry) {
-                var time = entry.Time;
-                var timeOfDayIconClass = "fas fa-sun";
-                var hours = time.split(":")[0];
-                if (hours > 16) {                    
-                    timeOfDayIconClass ="fas fa-moon";
-                } 
-
-                var color = entry.Color;
-                var sport = entry.Sport;
-                var name = entry.Name;
-                var encodedName = encodeURIComponent(name);
-                var encodedDescription = encodeURIComponent(entry.Description);
-                var video = entry.Video;
-                var picture = entry.Picture;
-
-                var cardClass = 'text-center card-shadow rounded mt-3 card-select-class';
-                if (index % 2 == 0) {
-                    cardClass += ' card bg-dark';
-                } else {
-                    cardClass += ' card-dark';
-                }
-                html += '<div class="' + cardClass + '" name="' + sport.replace(/\s+/g, '') + '">';
-                html += '<div style="display: flex; padding: 2px;" class="align-items-center">';
-                html += '<div class="text-nowrap schedule-card-time">';
-                html += time;
-                html += '</div>';
-                html += '<i class="'+ timeOfDayIconClass + '"></i>';
-                html += '<div class="schedule-card-text">';
-                html += '<a data-toggle="modal" href="#exampleModal" data-name="' + sport + '" data-picture="' + picture + '" data-video="' + video + '" data-description="' + encodedDescription + '" data-trainerName="' + name + '">';
-                html += sport;
-                html += '</a>';
-                html += '</div>';
-                html += '</div>';
-                html += '</div>';
-
-            });
+            var cardClass = 'text-center card-shadow rounded mt-3 card-select-class';
+            if (index % 2 == 0) {
+                cardClass += ' card bg-dark';
+            } else {
+                cardClass += ' card-dark';
+            }
+            html += '<div class="' + cardClass + '" name="' + sport.replace(/\s+/g, '') + '">';
+            html += '<div style="display: flex; padding: 2px;" class="align-items-center">';
+            html += '<div class="text-nowrap schedule-card-time">';
+            html += time;
             html += '</div>';
+            html += '<i class="'+ timeOfDayIconClass + '"></i>';
+            html += '<div class="schedule-card-text">';
+            html += '<a data-toggle="modal" href="#exampleModal" data-name="' + sport + '" data-picture="' + picture + '" data-video="' + video + '" data-description="' + encodedDescription + '" data-trainerName="' + name + '">';
+            html += sport;
+            html += '</a>';
+            html += '</div>';
+            html += '</div>';
+            html += '</div>';
+
         });
+        html += '</div>';
+    });
 
-        $('#content').append(html);
+    $('#content').append(html);
 
-        // Get the container element
-        var btnContainer = document.getElementById("content");
+    // Get the container element
+    var btnContainer = document.getElementById("content");
 
-        // Get all buttons with class="btn" inside the container
-        var btns = btnContainer.getElementsByClassName("card-select-class");
-
-
-        // Loop through the buttons and add the active class to the current/clicked button
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function (e) {
+    // Get all buttons with class="btn" inside the container
+    var btns = btnContainer.getElementsByClassName("card-select-class");
 
 
-                var shouldDeactivateAll = e.currentTarget.classList.contains("activeCard");
+    // Loop through the buttons and add the active class to the current/clicked button
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function (e) {
+            var shouldDeactivateAll = e.currentTarget.classList.contains("activeCard");
+            
+            // cleanup first
+            var btns = btnContainer.getElementsByClassName("card-select-class");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].classList.remove("activeCard");
+            }
 
-                // cleanup first
-                var btns = btnContainer.getElementsByClassName("card-select-class");
-                for (var i = 0; i < btns.length; i++) {
-                    btns[i].classList.remove("activeCard");
+            if (!shouldDeactivateAll) {
+                // add the new style
+                var x = document.getElementsByName(this.getAttribute("name"));
+                for (var j = 0; j < x.length; j++) {
+                    x[j].classList.add("activeCard");
                 }
+            }
 
-                if (!shouldDeactivateAll) {
-                    // add the new style
-                    var x = document.getElementsByName(this.getAttribute("name"));
-                    for (var j = 0; j < x.length; j++) {
-                        x[j].classList.add("activeCard");
-                    }
-                }
-
-            });
-        }
-
-
+        });
     }
-});
+  });
+
 
 $('#exampleModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
