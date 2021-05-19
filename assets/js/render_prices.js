@@ -12,27 +12,13 @@ function getUrlVars() {
     return vars;
 }
 
-var theUrl = "https://script.google.com/macros/s/AKfycbwHAwGpRWQk4N_MzbCkJ7u1S6ki3D7SAfNp1KjuNGpxbd1kAyBi1_NmKQ/exec";
+var datasource = "/datasource/prices.json";
 
-var locationParameter = getUrlVars()["location"];
-if (typeof locationParameter !== "undefined" && (typeof locationParameter !== "object" || !locationParameter)) {
-    theUrl += '?location=' + locationParameter;
-}
-
-// var theUrl = "test/data.js";
-
-$.ajax({
-    type: "GET",
-    url: theUrl,
-    dataType: "text",
-    success: function (response) {
-        eval(response);
+$.getJSON(datasource ,function( data ) {    
         var html = '';
         var count = 0;
-
         $.each(data, function (index, scheduleEntry) {
-            ++count;
-            console.log(count);
+            ++count;            
             var name = scheduleEntry['name'];
             var price = scheduleEntry['price'];
             var bcgrColor = 'black';
@@ -58,6 +44,6 @@ $.ajax({
         });
         $('#content').append(html);
 
-    }
-});
+    });
+
 
